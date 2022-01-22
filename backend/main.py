@@ -33,7 +33,7 @@ async def websocket_endpoint(websocket: WebSocket):
             else:
                 print("[another commend]", data)
 
-    except WebSocketDisconnect as e
+    except WebSocketDisconnect as e:
         print("disconnect", e)
 
 if __name__ == '__main__':
