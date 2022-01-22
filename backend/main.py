@@ -1,6 +1,6 @@
 import serial
 from serial.tools import list_ports
-from fastapi import FastAPI, WebSocket
+from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 
 
 app = FastAPI()
@@ -33,7 +33,7 @@ async def websocket_endpoint(websocket: WebSocket):
             else:
                 print("[another commend]", data)
 
-    except Exception as e:
+    except WebSocketDisconnect as e
         print("disconnect", e)
 
 if __name__ == '__main__':
