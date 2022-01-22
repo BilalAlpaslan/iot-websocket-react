@@ -28,8 +28,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <button onClick={() => this.buttonClick(97)}>tıkla</button>
-        <button onClick={() => this.buttonClick(98)}>tıkla</button>
+        <button onClick={() => this.buttonClick(97)}>aç</button>
+        <button onClick={() => this.buttonClick(98)}>kapa</button>
         <div className={"row"} style={{ backgroundColor: "#404040", height: "95vh", width: "200vh" }}>
           <div className={"col-md-6"} style={{ padding: 40 }}>
             {this.state.data.map(data =>
