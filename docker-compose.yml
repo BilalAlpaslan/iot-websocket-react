@@ -1,0 +1,20 @@
+version: "3.4"
+
+services:
+    backend:
+        build:
+            context: ./backend/
+            dockerfile: ./Dockerfile
+        container_name: backend
+        restart: always
+        ports:
+            - 8000:80
+
+    frontend:
+        build:
+            context: ./frontend/
+            dockerfile: ./Dockerfile
+        container_name: frontend
+        restart: always
+        ports:
+            - 8008:80
